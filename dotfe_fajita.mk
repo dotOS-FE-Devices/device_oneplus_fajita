@@ -21,30 +21,19 @@ $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 # Inherit from fajita device
 $(call inherit-product, device/oneplus/fajita/device.mk)
 
-# Inherit some common CherishOS stuff.
-$(call inherit-product, vendor/cherish/config/common_full_phone.mk)
+# Inherit some common dotOS Fan Edition stuff.
+$(call inherit-product, vendor/dotfe/config/common.mk)
 
+# dotOS Fan Edition Stuff
+TARGET_FACE_UNLOCK_SUPPORTES := true
+EXTRA_FOD_ANIMATIONS := true
+TARGET_USES_BLUR := true
 
 # Boot Animation
 TARGET_BOOT_ANIMATION_RES := 1080
 
-# Gapps
-TARGET_GAPPS_ARCH := arm64
-TARGET_INCLUDE_WIFI_EXT := true
-CHERISH_WITHGAPPS := true
-
-#No Gapps
-#CHERISH_NONGAPPS := true
-
-# Official
-CHERISH_BUILD_TYPE:= OFFICIAL
-
-# Maintainer
-PRODUCT_PROPERTY_OVERRIDES += \
-    ro.cherish.maintainer=Chandu
-
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := cherish_fajita
+PRODUCT_NAME := dotfe_fajita
 PRODUCT_DEVICE := fajita
 PRODUCT_MANUFACTURER := OnePlus
 PRODUCT_BRAND := OnePlus
