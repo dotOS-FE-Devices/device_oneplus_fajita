@@ -28,6 +28,7 @@ $(call inherit-product, vendor/dotfe/config/common.mk)
 TARGET_FACE_UNLOCK_SUPPORTES := true
 EXTRA_FOD_ANIMATIONS := true
 TARGET_USES_BLUR := true
+DOTFE_OFFICIAL := true
 
 # Boot Animation
 TARGET_BOOT_ANIMATION_RES := 1080
